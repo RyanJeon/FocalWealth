@@ -1,0 +1,16 @@
+
+.header{
+  height: 30px;
+  width: 100%;
+  margin-bottom: 2%;
+  padding: 10px;
+}
+
+.text{
+  font-family: 'Open Sans';
+  color: #999999;
+}
+
+.lists{
+  padding: 15px;
+}

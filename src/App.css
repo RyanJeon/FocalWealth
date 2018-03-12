@@ -1,0 +1,134 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: white;
+}
+
+
+
+.headbar{
+  justify-content: center;
+  padding: 2%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: #004466;
+}
+.container {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.side-content{
+  margin-left: 5%;
+}
+
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  left: 2%;
+  top: 4%;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #d9d9d9;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #004466;
+  padding: 2em 1em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.10em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menuhead{
+  left: 7px;
+  top: 7px;
+}
+
+.choice{
+  width: 100%;
+  margin-top: 20%;
+  margin-bottom: 25%;
+  justify-content: row;
+}
+
+.choice-txt{
+
+}
+
+.icon{
+  margin-right: 10px;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+.list1{
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.1);
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 2%;
+  width: 50%;
+  height: 380px;
+  background: white
+}
+
+.list2{
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.1);
+  position: absolute;
+  margin-top: 510px;
+  margin-left: 2%;
+  width: 96%;
+  height: 30%;
+  background: white
+}
+
+.map{
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.1);
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 53%;
+  width: 45%;
+  height: 380px;
+  background: white
+}

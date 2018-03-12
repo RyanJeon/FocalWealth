@@ -1,0 +1,30 @@
+{
+  "name": "focalw",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@weknow/react-bubble-chart-d3": "^1.0.8",
+    "google-map-react": "^0.32.0",
+    "google-maps-react": "^1.1.2",
+    "react": "^16.2.0",
+    "react-bubble-chart": "^0.4.0",
+    "react-burger-menu": "^2.2.3",
+    "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.5",
+    "react-modal": "^3.3.1",
+    "react-scripts": "1.1.1",
+    "react-scrollbar": "^0.5.4",
+    "react-sidebar": "^2.3.2",
+    "react-slider-menu": "^0.2.3",
+    "react-sliding-pane": "^2.0.2",
+    "react-table": "^6.7.6",
+    "react-window-size": "^1.0.1",
+    "semantic-ui-react": "^0.78.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
