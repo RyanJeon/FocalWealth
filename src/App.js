@@ -7,13 +7,21 @@ import Tran1 from './components/Tran1'
 import Modal from 'react-modal';
 import GoogleMapReact from 'google-map-react';
 import Maph from './components/Map';
-import BubbleChart from '@weknow/react-bubble-chart-d3';
+import ReactBubbleChart from 'react-bubble-chart';
 import ScrollArea from 'react-scrollbar';
 import Bubble from './components/Bubble';
 import customData from './Data/customData.json';
 import windowSize from 'react-window-size';
 
 
+var colorLegend = [
+  //reds from dark to light
+  {color: "#67000d", text: 'Negative', textColor: "#ffffff"}, "#a50f15", "#cb181d", "#ef3b2c", "#fb6a4a", "#fc9272", "#fcbba1", "#fee0d2",
+  //neutral grey
+  {color: "#f0f0f0", text: 'Neutral'},
+  // blues from light to dark
+  "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", {color: "#08306b", text: 'Positive', textColor: "#ffffff"}
+];
 
 
 class App extends Component {
@@ -93,6 +101,14 @@ class App extends Component {
 
   render() {
 
+    var data = {
+      _id: 'd',        // unique id (required)
+      value: 1,      // used to determine relative size of bubbles (required)
+      displayText: 'd',// will use _id if undefined
+      colorValue: 2, // used to determine color
+      selected: true,  // if true will use selectedColor/selectedTextColor for circle/text
+   }
+
     const panel = {
       margin: 10,
       width: 100,
@@ -114,7 +130,44 @@ class App extends Component {
     return (
       <div className = "container">
 
-        <Menu width = "13%" >
+
+        <div className = "headbar">
+          <h1>Focal Wealth</h1>
+        </div>
+
+        <Modal
+          isOpen = {this.state.modalOpen}
+          style = {SignInModal}
+        >
+          {this.renderModalContent('tag')}
+        </Modal>
+
+
+        <div className = "main-container">
+          <div>
+            <div className = "list1">
+              <ScrollArea style = {{width: this.props.windowWidth, height: 380}} ref='scrollarea'>
+
+              <Bubble />
+              </ScrollArea>
+             
+            </div>
+
+            <div className = "map">
+              <Maph></Maph>
+
+            </div>
+          </div>
+
+          <div className = "list2">
+              <div>
+                  <Tran1 show = {4} list = {customData}/>
+              </div>
+          </div>
+
+        </div>
+
+        <Menu width = "300px" >
           <h2 className = "menuhead">Catergories</h2>
 
           <div className = "choice">
@@ -138,41 +191,6 @@ class App extends Component {
           </div>
 
         </Menu>
-
-        <div className = "headbar">
-          <h1>Focal Wealth</h1>
-        </div>
-
-        <Modal
-          isOpen = {this.state.modalOpen}
-          style = {SignInModal}
-        >
-          {this.renderModalContent('tag')}
-        </Modal>
-
-
-        <div className = "main-container">
-          <div>
-            <div className = "list1">
-              <ScrollArea style = {{width: this.props.windowWidth, height: 380}} ref='scrollarea'>
-                <Bubble/>
-              </ScrollArea>
-             
-            </div>
-
-            <div className = "map">
-              <Maph></Maph>
-
-            </div>
-          </div>
-
-          <div className = "list2">
-              <div>
-                  <Tran1 show = {4} list = {customData}/>
-              </div>
-          </div>
-
-        </div>
 
 
       </div>

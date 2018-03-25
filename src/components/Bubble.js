@@ -43,7 +43,7 @@ class Bubble extends Component{
                 weight: 'bold',
               }}
             data={[
-            { label: 'Energy', value: 1 },
+            { label: 'Energy', value: 1  },
             { label: 'Materials', value: 2 },
             { label: 'Industrials', value: 3 },
             { label: 'Consumer Discretionary', value: 4},
