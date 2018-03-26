@@ -2,21 +2,31 @@ import React, {Component} from 'react';
 import GoogleMapReact from 'google-map-react';
 
 
-var data = [
+
+var data = [ //temporary hard coded data.
   {
     position: {lat: -23.57, lng: -46.65},
-    title: 'Test 1'
+    title: 'Test 1',
+    contentString: 'Test 1'
   },
   {
     position: {lat: -23.659741479934045, lng: -46.66976573339457},
-    title: 'Test 2'
-  }
+    title: 'Test 2',
+    contentString: 'Test 2'
+  },
+  {
+    position: {lat: -23.69068114130335,  lng: -46.508541418451614},
+    title: 'Test 3',
+    contentString: 'Test 3'
+    
+   
+  },
 
 ]
 
 class Map extends Component{
 
-  renderMarker(map, maps, position, title) { //Base function that generates one marker
+  renderMarker(map, maps, position, title, contentString) { //Base function that generates one marker
     let marker = new maps.Marker({
         position: {lat: position.lat, lng: position.lng},
         map,
@@ -24,17 +34,22 @@ class Map extends Component{
       },
     );
 
-    
-      marker.addListener('click', function() {
+    let infowindow = new maps.InfoWindow({
+      content: contentString
+    });
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
         console.log(title)
-      });
+     
+    });
    
 
   }
   
   //Render multiple markers
   renderMarkers(map, maps, data){
-    var task_names = data.map((task) => this.renderMarker(map, maps, task.position, task.title) );
+    data.map((inv) => this.renderMarker(map, maps, inv.position, inv.title, inv.contentString) );
   }
 
 

@@ -6,7 +6,7 @@ import ReactDom from 'react-dom';
 import Tran1 from './components/Tran1'
 import Modal from 'react-modal';
 import GoogleMapReact from 'google-map-react';
-import Maph from './components/Map';
+import Map from './components/Map';
 import ReactBubbleChart from 'react-bubble-chart';
 import ScrollArea from 'react-scrollbar';
 import Bubble from './components/Bubble';
@@ -154,7 +154,7 @@ class App extends Component {
             </div>
 
             <div className = "map">
-              <Maph></Maph>
+              <Map></Map>
 
             </div>
           </div>
