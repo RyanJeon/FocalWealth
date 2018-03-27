@@ -7,7 +7,9 @@ var data = [ //temporary hard coded data.
   {
     position: {lat: -23.57, lng: -46.65},
     title: 'Test 1',
-    contentString: 'Test 1'
+    contentString: '<div>Test 1</div>'+
+                    '<div> Profile </div>'+
+                    '<h1> Font Size </h1>'
   },
   {
     position: {lat: -23.659741479934045, lng: -46.66976573339457},
