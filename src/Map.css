@@ -1,0 +1,21 @@
+#profileContainer{
+    background: white;
+    height: 30vh;
+    width: 20vw;
+
+    color: black;
+}
+
+#profilepic{
+    height: 20vh;
+    width: 12vw;
+}
+
+#profileName{
+    color: white;
+    vertical-align: middle;
+    padding: 10px;
+
+    background: #004466;
+    height: 5vh;
+}

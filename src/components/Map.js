@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import GoogleMapReact from 'google-map-react';
+import '../Map.css';
 
 
 
@@ -7,19 +8,35 @@ var data = [ //temporary hard coded data.
   {
     position: {lat: -23.57, lng: -46.65},
     title: 'Test 1',
-    contentString: '<div>Test 1</div>'+
-                    '<div> Profile </div>'+
-                    '<h1> Font Size </h1>'
+    contentString: '<div id = "profileContainer">'+
+                      '<div id = "profileName">'+
+                          '<h2> First User </h2>'+
+                        '</div>'+
+                      '<img  id = "profilepic" src = "http://www.magnideipccpa.com/wp-content/'+
+                      'uploads/2016/10/Businessman-Images-HD-copy-1.png"/> ' +
+                   '</div>'
   },
   {
     position: {lat: -23.659741479934045, lng: -46.66976573339457},
     title: 'Test 2',
-    contentString: 'Test 2'
+    contentString: '<div id = "profileContainer">'+
+                    '<div id = "profileName">'+
+                        '<h2> Second User </h2>'+
+                      '</div>'+
+                    '<img  id = "profilepic" src = "http://www.magnideipccpa.com/wp-content/'+
+                    'uploads/2016/10/Businessman-Images-HD-copy-1.png"/> ' +
+                '</div>'
   },
   {
     position: {lat: -23.69068114130335,  lng: -46.508541418451614},
     title: 'Test 3',
-    contentString: 'Test 3'
+    contentString: '<div id = "profileContainer">'+
+    '<div id = "profileName">'+
+        '<h2> ThirdUser </h2>'+
+      '</div>'+
+    '<img  id = "profilepic" src = "http://www.magnideipccpa.com/wp-content/'+
+    'uploads/2016/10/Businessman-Images-HD-copy-1.png"/> ' +
+'</div>'
     
    
   },
@@ -27,6 +44,8 @@ var data = [ //temporary hard coded data.
 ]
 
 class Map extends Component{
+
+
 
   renderMarker(map, maps, position, title, contentString) { //Base function that generates one marker
     let marker = new maps.Marker({
